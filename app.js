@@ -37,8 +37,13 @@ async function sendMessage() {
 function displayMessage(message, sender) {
   const chatBox = document.getElementById('chat-box');
   const messageDiv = document.createElement('div');
-  messageDiv.classList.add(sender);
-  messageDiv.innerText = message;
+
+  if (sender === 'user') {
+    messageDiv.innerText = message;
+  } else {
+    messageDiv.innerText = `Chatbot: ${message}`;
+  }
+
   chatBox.appendChild(messageDiv);
   chatBox.scrollTop = chatBox.scrollHeight;
 }
