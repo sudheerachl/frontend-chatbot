@@ -17,7 +17,7 @@ async function sendMessage() {
     userMessageInput.value = '';
 
     try {
-        const response = await fetch('https://backend-chatbot-05v9.onrender.com/get_response', {
+        const response = await fetch('https://backend-chabot.onrender.com/get_response', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
